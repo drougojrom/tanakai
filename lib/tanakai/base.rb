@@ -28,6 +28,7 @@ module Tanakai
 
     class << self
       attr_reader :run_info, :savers, :storage
+      attr_accessor :start_urls
     end
 
     def self.running?
@@ -76,10 +77,6 @@ module Tanakai
 
     def self.pipelines
       @pipelines ||= superclass.pipelines
-    end
-
-    def self.start_urls
-      @start_urls
     end
 
     def self.config
