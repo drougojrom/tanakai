@@ -28,7 +28,7 @@ module Tanakai
 
     class << self
       attr_reader :run_info, :savers, :storage
-      attr_accessor :start_urls, :output_text_data
+      attr_accessor :start_urls
     end
 
     def self.running?
