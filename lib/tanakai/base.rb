@@ -28,7 +28,7 @@ module Tanakai
 
     class << self
       attr_reader :run_info, :savers, :storage
-      attr_accessor :start_urls
+      attr_accessor :start_urls, :name
     end
 
     def self.running?
@@ -66,10 +66,6 @@ module Tanakai
     @engine = :mechanize
     @pipelines = []
     @config = {}
-
-    def self.name
-      @name
-    end
 
     def self.engine
       @engine ||= superclass.engine
